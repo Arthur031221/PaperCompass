@@ -1,0 +1,59 @@
+{
+  "method": {
+    "reading_list_size": 50,
+    "seed_count": 40,
+    "holdout_count": 10,
+    "holdout_fraction": 0.2,
+    "split_seed": 0,
+    "distractor_categories": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CV",
+      "stat.ML",
+      "cs.AI"
+    ],
+    "distractor_days": 90,
+    "distractor_max_per_category": 150,
+    "candidate_pool_size": 673,
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": "cpu",
+    "top_k": 50
+  },
+  "result": {
+    "recall_at_k": 0.9,
+    "hits": [
+      "1312.5602",
+      "1506.02640",
+      "1704.04861",
+      "1710.10196",
+      "1802.05365",
+      "1907.11692",
+      "2002.05709",
+      "2003.08934",
+      "2112.10752"
+    ],
+    "misses": [
+      "1412.6980"
+    ],
+    "ranks_of_holdout_papers": {
+      "1704.04861": 3,
+      "1506.02640": 4,
+      "1412.6980": 219,
+      "1710.10196": 1,
+      "2112.10752": 6,
+      "2003.08934": 39,
+      "1312.5602": 2,
+      "2002.05709": 5,
+      "1802.05365": 16,
+      "1907.11692": 13
+    },
+    "unresolved_reading_list_ids": []
+  },
+  "timing_seconds": {
+    "model_load": 4.33,
+    "distractor_ingest": 28.25,
+    "reading_list_resolve_and_embed": 3.18,
+    "ranking": 0.0066,
+    "wall_clock_total": 35.77
+  }
+}
