@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# uv / venv
+.venv/
+
+# papercompass runtime data: local SQLite db and arXiv response cache
+*.db
+*.db-journal
+arxiv_cache/
+eval/.bench-data/
+/tmp-*
+
+# editors and OS
+.DS_Store
+.idea/
+.vscode/
