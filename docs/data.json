@@ -1,0 +1,1132 @@
+{
+  "generated_at": "2026-09-29",
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "seed_count": 50,
+  "candidate_pool_size": 673,
+  "generation_seconds": 0.2,
+  "recommendations": [
+    {
+      "arxiv_id": "2609.35090",
+      "title": "Advancing Video-Text Pretraining with Multi-View Captions",
+      "abstract": "Video-text pretraining has achieved remarkable progress through the scaling of models and datasets, yet the quality of language supervision remains underexplored. Existing web-scale datasets often provide only a single sparse caption per video that fails to capture rich spatiotemporal semantics, while directly using captioning models can generate noisy descriptions. We propose a large-scale multimodal large language model-based supervision generation framework that improves supervision diversity, fidelity, and semantic coverage. Starting from 10 million videos, our approach generates multi-view captions (MVC) through complementary summary and detailed captions, reasoning-based refinement, and semantic positive caption generation. To effectively exploit supervision at different granularities, we further introduce a granularity-aware text representation with separate CLS tokens for summary and detailed views. We pretrain video-text models using the resulting supervision corpus and evaluate them across standard, fine-grained and detailed text-to-video retrieval benchmarks. Our approach consistently improves both zero-shot and fine-tuned performance while using smaller pretraining corpora than existing methods, demonstrating the importance of rich and complementary textual supervision for video-text pretraining. Project page: https://rvandeghen.github.io/mvc/",
+      "authors": [
+        "Fida M. Thoker",
+        "Renaud Vandeghen",
+        "Karen Sanchez",
+        "Marc Van Droogenbroeck",
+        "Bernard Ghanem"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T13:04:53Z",
+      "updated": "2026-09-28T13:04:53Z",
+      "url": "https://arxiv.org/abs/2609.35090",
+      "score": 0.6699,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.7213
+        },
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.6644
+        },
+        {
+          "arxiv_id": "2204.06125",
+          "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "similarity": 0.6241
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35490",
+      "title": "AHMAD: Adaptive Hybrid Multi-task Vision Learning with Assisted Distillation for Keypoint Detection",
+      "abstract": "Generalist multitasking vision models aim to unify multiple vision tasks within a single framework, enabling more efficient and versatile learning. However, handling diverse vision tasks -- spanning dense and sparse predictions -- remains challenging due to their inherently varying output structures. In this paper, we propose AHMAD, a simple yet effective framework for generalist multitask learning that integrates different key vision tasks: semantic segmentation, instance segmentation, depth estimation, keypoint detection, and object detection. Our approach incorporates these five tasks into a unified structure: a shared encoder-decoder with several lightweight task-specific projectors. Under the multitask learning paradigm, we observed a complementary performance gain, achieving a state-of-the-art PQ of 53.1 and an mIoU of 66.5 for COCO-val panoptic and semantic segmentation, respectively. Additionally, for top-down keypoint detection, which typically incurs high computational overhead due to multiple forward passes, we introduce a knowledge distillation-based method that enables a single forward pass over the entire image, greatly improving efficiency. Ultimately, our model delivers a lightweight yet effective generalist multitask learning framework, demonstrating strong performance across five vision tasks.",
+      "authors": [
+        "Mohammad Mahdi",
+        "Nedyalko Prisadnikov",
+        "Yuqian Fu",
+        "Carmelo Scribano",
+        "Danda Pani Paudel",
+        "Luc Van Gool"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T16:00:46Z",
+      "updated": "2026-09-28T16:00:46Z",
+      "url": "https://arxiv.org/abs/2609.35490",
+      "score": 0.6625,
+      "why": [
+        {
+          "arxiv_id": "1311.2524",
+          "title": "Rich feature hierarchies for accurate object detection and semantic segmentation",
+          "similarity": 0.6861
+        },
+        {
+          "arxiv_id": "1506.01497",
+          "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+          "similarity": 0.6535
+        },
+        {
+          "arxiv_id": "1512.00567",
+          "title": "Rethinking the Inception Architecture for Computer Vision",
+          "similarity": 0.6478
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34593",
+      "title": "Deep Weighted Bellman Residual Minimization for $Q^*$ Estimation",
+      "abstract": "Off-policy evaluation is a foundational component of offline reinforcement learning, aiming to assess and optimize policy performance using pre-collected datasets. However, such datasets often suffer from pronounced challenges, including distribution shift, $Q$-value overestimation, and low sample utilization efficiency. To address these issues, this paper introduces a weighted Bellman residual minimization framework that incorporates density ratio weighting by effectively integrating expert demonstrations with behavioral data. The proposed weighting scheme departs from the conventional completeness assumption commonly imposed in the theoretical analysis of deep reinforcement learning. We establish a sharp convergence rate for density ratio estimation and derive the convergence rate for the excess risk of resulting deep $Q^*$ estimator. Extensive empirical evaluations demonstrate that, compared to existing methods, our method achieves significant improvements in numerical performance and policy generalization, providing specific guidance for the rational utilization of expert demonstrations.",
+      "authors": [
+        "Lican Kang",
+        "Jerry Zhijian Yang",
+        "Cheng Yuan",
+        "Chen Zhong"
+      ],
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-09-28T08:30:21Z",
+      "updated": "2026-09-28T08:30:21Z",
+      "url": "https://arxiv.org/abs/2609.34593",
+      "score": 0.6507,
+      "why": [
+        {
+          "arxiv_id": "1509.06461",
+          "title": "Deep Reinforcement Learning with Double Q-learning",
+          "similarity": 0.6742
+        },
+        {
+          "arxiv_id": "1312.5602",
+          "title": "Playing Atari with Deep Reinforcement Learning",
+          "similarity": 0.646
+        },
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.632
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35226",
+      "title": "Generative AI-Based Data Augmentation for Oral Lesion Classification: The PhotoMOCI Dataset and Benchmark",
+      "abstract": "Early detection of oral cancer via photographic imaging presents a promising avenue for large-scale oral cavity screening. However, the development of robust deep learning models is frequently hampered by the scarcity of high-quality, annotated datasets. To address this limitation, a novel and well-curated resource, the Photographic Multi-purpose Oral Cancer Imaging (PhotoMOCI) dataset, is introduced for developing models across multiple diagnostic tasks in oral oncology. Then, a comprehensive benchmark study was conducted to investigate how various data augmentation strategies influence the performance of image classifiers. Our analysis spans different generative AI frameworks, evaluating the efficacy of traditional methods against advanced generative approaches, including Generative Adversarial Networks (GANs) and Diffusion Models (DMs). Additionally, we propose the Synthetic Image Filter (SIF), a mechanism to select specific samples based on two auxiliary models: Synthetic Proxy Classifier to ensure samples are representative of the target class and Synthetic Image Detector to verify they appear realistic, thereby selecting only the high-utility images that contribute to improving downstream performance. Across the evaluated datasets and classifiers, the best SIF-filtered setup improves accuracy over traditional augmentation in all cases, with gains of +1.73% and +2.35% on PhotoMOCI and +2.38% and +2.08% on KOCD for ResNet50 and ViT, respectively. Our findings reveal that while the direct application of generative data augmentation may yield performance drops, the integration of SIF, considering (i) how synthetic data looks real and (ii) how it reflects the discriminative features of the belonging class, provides a simple yet effective mechanism to filter out synthetic samples that confuse the classifier during training.",
+      "authors": [
+        "Marco Parola",
+        "Mario G. C. A. Cimino",
+        "Sabrina Senatore"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-09-28T14:09:27Z",
+      "updated": "2026-09-28T14:09:27Z",
+      "url": "https://arxiv.org/abs/2609.35226",
+      "score": 0.6348,
+      "why": [
+        {
+          "arxiv_id": "1710.10196",
+          "title": "Progressive Growing of GANs for Improved Quality, Stability, and Variation",
+          "similarity": 0.6513
+        },
+        {
+          "arxiv_id": "1511.06434",
+          "title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+          "similarity": 0.6463
+        },
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.6069
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35449",
+      "title": "From internal representations to model improvement through prediction errors",
+      "abstract": "With limited annotation budgets, choosing which images to label determines how much a model improves. Data-selection methods that use features from a separately trained model, or scene descriptions written by vision-language models, have been successful, but those signals do not directly capture changes in the model being improved. The target model's own internal features reflect what it has learned so far and change with retraining, making them a natural cue for choosing the next training data. However, feature rarity alone does not reveal the errors that matter for performance. Here we link internal features to prediction errors and their expected impact on performance and select images for labeling and retraining without using labels for candidate images. We evaluated the method with an object detector on two datasets and two pairs of random seeds. Adding internal features improved the identification of prediction errors in 15 of 16 conditions. When performance was averaged over successive labeling rounds, the method outperformed selection based only on feature rarity in all four evaluation settings and ranked among the top two of six methods. With other conditions held fixed, performance after retraining was again higher than with rarity-based selection, even though the latter collected more errors. With longer retraining, the proposed method ranked first among six methods. These results suggest that linking a model's internal features to its errors and their effects on performance may help select training images that improve performance, thereby allowing the model's current state to guide which images are labeled next.",
+      "authors": [
+        "Yushi Nakaya",
+        "Kenichi Higuchi",
+        "Shuichi Ishida"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-09-28T15:43:19Z",
+      "updated": "2026-09-28T15:43:19Z",
+      "url": "https://arxiv.org/abs/2609.35449",
+      "score": 0.6312,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6705
+        },
+        {
+          "arxiv_id": "1311.2524",
+          "title": "Rich feature hierarchies for accurate object detection and semantic segmentation",
+          "similarity": 0.6167
+        },
+        {
+          "arxiv_id": "2002.05709",
+          "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+          "similarity": 0.6065
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35615",
+      "title": "Behavioral Foundation Models for Quality Diversity",
+      "abstract": "Behavioral Foundation Models (BFMs) are an emerging paradigm in reinforcement learning, playing a role analogous to large language models in natural language processing: they have shown remarkable versatility, enabling zero-shot performance, fast imitation, and online adaptation, all by exploiting the structure of a latent space. In this work, we investigate whether the latent behavioral space induced by BFMs can serve as an effective search space to discover large repertoires of behaviorally diverse and high-performing policies through Quality-Diversity (QD) methods. While QD methods generally search directly in high-dimensional policy parameter space, in this paper, we present BFM-QD, a framework that performs QD search in the compact latent space of a BFM. We further show that the BFM-QD framework provides a closed-form, gradient-free policy improvement operator that approximates a policy gradient update, but requires no critic training and no backpropagation. Across continuous-control benchmarks spanning dense locomotion, sparse navigation, and contact-rich manipulation, BFM-QD consistently outperforms parameter-space baselines, with particularly stark gains in sparse and deceptive settings, where all tested parameter-space QD methods collapse to near-zero performance. These results show the effectiveness of the BFM-QD framework, benefiting from the synergy between dimensionality reduction of the search space and offline pretraining from diverse behavioral data. This positions BFMs as a general-purpose backbone for QD optimization, extending their utility beyond zero-shot task solving to the discovery of diverse behavioral repertoires.",
+      "authors": [
+        "Nazim Bendib",
+        "Nicolas Perrin-Gilbert",
+        "Olivier Sigaud"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-09-28T16:56:06Z",
+      "updated": "2026-09-28T16:56:06Z",
+      "url": "https://arxiv.org/abs/2609.35615",
+      "score": 0.6299,
+      "why": [
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.6572
+        },
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.6286
+        },
+        {
+          "arxiv_id": "1509.02971",
+          "title": "Continuous control with deep reinforcement learning",
+          "similarity": 0.6039
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35378",
+      "title": "Multilinguality in Hybrid Attention LLMs",
+      "abstract": "In response to the growing demand for long sequences in agentic and reasoning use cases, many state-of-the-art LLMs combine multiple variants of attention to mitigate the quadratic complexity of traditional softmax attention. These hybrid attention LLMs aim to balance the strengths and limitations of full attention and alternatives based on recurrence. This work presents a first study of how hybrid attention impacts the multilinguality of LLMs. Beyond the impact on long sequences in poorly tokenized languages, our study is motivated by the possibility that the inductive biases of the recurrent state alter linguistic processing. Our interpretability analysis confirms this, showing that cross-lingual representations in hybrid models develop in patterns tied to the ordering of recurrent and full-attention layers. Across diverse models, we notably observe a pronounced spike in cross-lingual alignment around the first full-attention layer. These findings lead us to question the conventional ordering of attention layers. In distillation experiments on multilingual data, all alternative layer orderings outperform the standard throughout training, learning up to 2.5X faster. These stark, replicable results prompt our theory that multilingual models would benefit from starting with a full-attention layer rather than recurrent layers.",
+      "authors": [
+        "Lucas Bandarkar",
+        "Junlin Hu",
+        "Chenyuan Yang",
+        "Mohsen Fayyaz",
+        "Nanyun Peng"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "published": "2026-09-28T15:14:07Z",
+      "updated": "2026-09-28T15:14:07Z",
+      "url": "https://arxiv.org/abs/2609.35378",
+      "score": 0.6278,
+      "why": [
+        {
+          "arxiv_id": "1706.03762",
+          "title": "Attention Is All You Need",
+          "similarity": 0.6837
+        },
+        {
+          "arxiv_id": "1409.3215",
+          "title": "Sequence to Sequence Learning with Neural Networks",
+          "similarity": 0.6399
+        },
+        {
+          "arxiv_id": "1810.04805",
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "similarity": 0.5599
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34861",
+      "title": "When Text Matters: Design Principles for Visual Token Pruning in Vision-Language Model",
+      "abstract": "Visual token pruning has been widely studied as a practical approach to reducing the computational cost of large vision-language models. However, it struggles to preserve essential visual information, which can lead to substantial performance degradation. In particular, image-based token selection can overlook task-relevant details, while text-guided token selection may fail to capture the text--visual relationships needed for complex reasoning. We find that applying textual guidance too early can limit its ability to identify answer-relevant visual regions, whereas text-to-visual attention becomes more informative at intermediate decoder depths. This finding motivates our training-free method, which separates early vision-guided pruning from deferred text-guided reselection. We first prune visual tokens using vision-encoder attention, retain additional candidates until the decoder midpoint, and then use text-to-visual attention to determine the final visual-token set. Across eight benchmarks and three models, our method outperforms the best-performing baselines by an average of 11.10 and 16.84 percentage points in performance recovery at 80% and 90% pruning, respectively, with comparable or lower LLM-prefill latency than most baselines. The source code is publicly available at https://github.com/kmc3661/DeFT",
+      "authors": [
+        "Minchan Kang",
+        "Kyeonghye Park",
+        "Seoyoung Cho",
+        "Daeshik Kim",
+        "Yucheol Cho"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-09-28T10:49:40Z",
+      "updated": "2026-09-28T10:49:40Z",
+      "url": "https://arxiv.org/abs/2609.34861",
+      "score": 0.62,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6295
+        },
+        {
+          "arxiv_id": "2010.11929",
+          "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+          "similarity": 0.6241
+        },
+        {
+          "arxiv_id": "1706.03762",
+          "title": "Attention Is All You Need",
+          "similarity": 0.6065
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.29350",
+      "title": "Learning a Flow to Self-Supervised Representations",
+      "abstract": "Explicit geometric references offer a direct way to structure self-supervised representations. Existing adversarial distribution-matching formulations, however, require costly encoder-critic optimization. We introduce Flow-Based Distribution Matching (FBDM), a non-adversarial framework that learns this reference-directed geometry through spherical conditional velocity regression. An ETF-inspired reference allows its number of components K' to exceed the auxiliary flow dimension d* while retaining structured geometric separation. We assign both augmented views of each image to the same target, while limiting how many images each reference center can receive. An explicit alignment loss further pulls the two views' representations closer together. Experiments across benchmarks ranging from CIFAR to ImageNet show that FBDM achieves performance nearly on par with DM and remains competitive with existing SSL methods. Matched training-cost comparisons show a 1.48- to 1.83-fold speedup over DM with a negligible increase in GPU memory usage. We also provide a theoretical explanation for the usefulness of the learned representations: under stated conditions, we bound the downstream misclassification rate in terms of the FBDM pretraining loss.",
+      "authors": [
+        "Yuling Jiao",
+        "Wensen Ma",
+        "Houduo Qi",
+        "Defeng Sun"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-09-24T10:24:53Z",
+      "updated": "2026-09-25T19:56:14Z",
+      "url": "https://arxiv.org/abs/2609.29350",
+      "score": 0.619,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6483
+        },
+        {
+          "arxiv_id": "1511.06434",
+          "title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+          "similarity": 0.6118
+        },
+        {
+          "arxiv_id": "2002.05709",
+          "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+          "similarity": 0.597
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35407",
+      "title": "BiMoGen: Bidirectional Motion-Text Generation via Unified Masked Discrete Diffusion",
+      "abstract": "Text-to-motion generation and motion-to-text captioning are two fundamental tasks in human motion modeling, both grounded in the same underlying motion-text correspondence. Existing unified approaches mostly rely on autoregressive modeling, which imposes a fixed generation order and is therefore poorly suited to the bidirectional dependencies between language and motion, allowing early prediction errors to persist as fixed context and degrade both temporal coherence and cross-modal consistency. Masked discrete diffusion, which models sequences through iterative bidirectional prediction, offers a natural remedy. We therefore propose BiMoGen (Bidirectional Motion-text Generation), a unified masked discrete diffusion framework for bidirectional motion-text modeling. To stabilize training, we design Decoupled Uni- and Cross-Modal Training, in which masked pretraining first establishes cross-modal correspondence on paired motion-text sequences, after which supervised fine-tuning specializes the model for bidirectional generation. Masked diffusion nonetheless introduces its own source of error, as the model is trained on clean ground-truth context yet encounters self-generated and potentially erroneous context at inference, with errors committed under heavily masked states propagating through subsequent steps. We further introduce Generation-Aware Self-Correction that exposes the model to its own predictions during training and applies correction passes at early sampling steps to revise unreliably committed tokens. Extensive experiments on HumanML3D and KIT-ML demonstrate competitive performance on both tasks, validating the effectiveness of the proposed two-stage training and self-correction designs. The project page is available at https://wengwanjiang.github.io/BiMoGen-Page.",
+      "authors": [
+        "Wanjiang Weng",
+        "Yongliang Wu",
+        "Xiaofeng Tan",
+        "Xingyu Zhu",
+        "Wenbo Zhu",
+        "Hongsong Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T15:27:32Z",
+      "updated": "2026-09-28T15:27:32Z",
+      "url": "https://arxiv.org/abs/2609.35407",
+      "score": 0.6166,
+      "why": [
+        {
+          "arxiv_id": "2204.06125",
+          "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "similarity": 0.6841
+        },
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.5926
+        },
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.5732
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35718",
+      "title": "Hard Vision, Easy Vision: What GPT-6 Astra Reveals Across Computer Vision",
+      "abstract": "Frontier general-purpose systems are rapidly expanding beyond visual understanding into capabilities traditionally handled by dedicated computer-vision models. As these capabilities expand, a central question for the computer-vision community is how far this reach extends, and what remains hard. We evaluate GPT-6 Astra alongside five frontier general-purpose AI systems across 34 capabilities and 55 benchmarks spanning nine areas of computer vision. We compare their performance with dedicated models and humans where suitable references are available. Astra demonstrates broad visual capability, with substantial gains over other frontier systems in visual and spatial reasoning and several forms of structured prediction. Across the state-of-the-art systems, a consistent pattern emerges. Capabilities involving semantic interpretation, reasoning, and object-centric prediction increasingly approach or reach available reference levels. In contrast, larger gaps remain when tasks require metric geometric accuracy, faithful reconstruction, temporally consistent dense prediction, or specialized fine-grained visual knowledge. Additional reasoning and specialist tools close selected gaps, but their benefits vary across capabilities. These results map a changing landscape of computer vision in which increasingly sophisticated visual tasks are accessible through a general-purpose interface, while precise and fidelity-sensitive perception remains an important frontier.",
+      "authors": [
+        "Hanoona Rasheed",
+        "Mohammed Irfan Kurpath",
+        "Bin Ren",
+        "Hisham Cholakkal",
+        "Fahad Shahbaz Khan",
+        "Salman Khan"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T17:46:57Z",
+      "updated": "2026-09-28T17:46:57Z",
+      "url": "https://arxiv.org/abs/2609.35718",
+      "score": 0.6153,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6644
+        },
+        {
+          "arxiv_id": "1512.00567",
+          "title": "Rethinking the Inception Architecture for Computer Vision",
+          "similarity": 0.6006
+        },
+        {
+          "arxiv_id": "1512.03385",
+          "title": "Deep Residual Learning for Image Recognition",
+          "similarity": 0.5809
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35139",
+      "title": "CacheRepair: Learning to Repair Cross-Chunk Context in RAG for KV Cache Fusion",
+      "abstract": "Multi-document retrieval-augmented generation (RAG) requires a language model to process multiple retrieved text chunks before answering a question. Precomputing each chunk's KV cache independently and concatenating the caches when the chunks are retrieved can accelerate this step. However, the assembled cache lacks cross-chunk attention information, reducing answer quality. Selective recomputation methods recover the missing cross-chunk context by rerunning the target LLM on selected tokens, incurring substantial online computation. We introduce CacheRepair, a lightweight network that learns the difference between independently computed KV caches and those produced by processing the chunks together. The network combines compressed KV features with token embeddings and uses attention that is bidirectional within each chunk and flows from earlier to later chunks. Each repair block receives the compressed cache features, and the predicted residual is added to every document token's cache. Each repair network is trained for a specific frozen target LLM on a generic retrieval corpus and reused across downstream datasets. Our analysis shows that repair reduces KV errors both near chunk boundaries and throughout chunk interiors. Evaluation across three target LLMs and four downstream datasets places CacheRepair on the measured answer-quality-latency Pareto frontier in eleven of twelve model-dataset combinations. Reported time to first token (TTFT) includes online cache transfer and repair. Across all twelve combinations, the largest repairers achieve 1.69-4.61$\\times$ speedups in median TTFT over full prefill and improve mean F1 by 2.1-26.1 percentage points over direct cache reuse.",
+      "authors": [
+        "Genglin Wang",
+        "Wangsong Yin",
+        "Yeerzhati Abudunuer",
+        "Haoxuan Xu",
+        "Guoliang Xing",
+        "Zhenyu Yan"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-28T13:26:55Z",
+      "updated": "2026-09-28T13:26:55Z",
+      "url": "https://arxiv.org/abs/2609.35139",
+      "score": 0.615,
+      "why": [
+        {
+          "arxiv_id": "2005.11401",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "similarity": 0.6618
+        },
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.6023
+        },
+        {
+          "arxiv_id": "1910.10683",
+          "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+          "similarity": 0.581
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34972",
+      "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+      "abstract": "Long visual token sequences often account for a substantial fraction of the computational overhead in multimodal large language models~(MLLMs). Existing approaches reduce this cost by pruning redundant visual tokens, but permanently discard visual evidence that may become useful in subsequent layers. We instead ask whether all visual tokens can be preserved while reducing the cost of repeatedly evolving the representations through the Transformer. To answer this question, we perform low-rank interventions on visual-to-text information flow. We find that, after visual-to-text attention is blocked, restoring only a few directions recovers most of the lost accuracy, suggesting the relevant visual influence is concentrated in a low-dimensional subspace. We further observe strong predictability in layer-specific visual states: lightweight MLPs approximate them with high cosine similarity and low reconstruction error. Motivated by these findings, we propose $\u03b4$-Vision, which replaces repeated Transformer evolution of visual tokens with lightweight low-rank adapters that construct layer-wise visual memories while preserving all visual tokens for text retrieval. Across image and video benchmarks, $\u03b4$-Vision achieves higher accuracy than visual token pruning baselines at comparable or lower computation, while delivering competitive inference efficiency without discarding visual tokens.",
+      "authors": [
+        "Jingdi lei",
+        "Junxian Li",
+        "Di Zhang",
+        "Zhanqiu Zhang",
+        "Yiwen Guo",
+        "Soujanya Poria"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-09-28T11:52:45Z",
+      "updated": "2026-09-28T11:52:45Z",
+      "url": "https://arxiv.org/abs/2609.34972",
+      "score": 0.6112,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6487
+        },
+        {
+          "arxiv_id": "2010.11929",
+          "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+          "similarity": 0.5931
+        },
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.5919
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34934",
+      "title": "TaoTex: Boosting Texture Detail Fidelity for Native 3D Material Generation",
+      "abstract": "Recent 3D generation models can produce accurate geometries while still struggling to reconstruct detailed textures. We propose a diffusion-based native 3D material generation model TaoTex, which faithfully recovers intricate textures through tailored strategies and improvements. First, we develop a data construction agent to create high-frequency textured 3D assets to bridge the data gap in public datasets. Training with these data significantly enhances the ability of TaoTex to recover challenging details such as text and patterns. Second, we design a multi-level feature fusion (MLFF) module to adaptively integrate local and global features of the conditional input, providing more complete texture cues for the diffusion model and thereby enhancing reconstruction fidelity. To alleviate VAE reconstruction errors, we adopt a latent-to-pixel space loss transition, further improving the pixel-level details and generation quality. Finally, we scale TaoTex to multi-view inputs by incorporating learnable viewpoint embeddings, achieving accurate and consistent material reconstruction across views. Extensive experiments demonstrate that our method significantly outperforms existing approaches in preserving texture details in both single- and multi-view settings.",
+      "authors": [
+        "Xiuchao Wu",
+        "Shuichang Lai",
+        "Jiangjing Lyu",
+        "Chengfei Lyu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T11:31:38Z",
+      "updated": "2026-09-28T11:31:38Z",
+      "url": "https://arxiv.org/abs/2609.34934",
+      "score": 0.6095,
+      "why": [
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.6458
+        },
+        {
+          "arxiv_id": "2003.08934",
+          "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+          "similarity": 0.6225
+        },
+        {
+          "arxiv_id": "1511.06434",
+          "title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+          "similarity": 0.5603
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35573",
+      "title": "Less Is More: Genetic Frame Selection for Efficient Novel View Synthesis",
+      "abstract": "Feed-forward novel view synthesis reconstructs a scene from many input images in a single forward pass, yet more views do not necessarily improve performance: redundant or poorly chosen frames increase computational cost and may degrade reconstruction quality. We address the problem of selecting, from an already captured sequence, a fixed-size subset of input views that is most informative for reconstructing specified target viewpoints. We propose a render-free view selector that scores candidate frames based on three complementary criteria: target-view coverage, measured against observed frames that stand in for the targets, redundancy with previously selected views, and image sharpness. A lightweight scoring network then selects the most informative frames without rendering, reconstruction, or per-scene optimization at inference time. To train the selector, we distill an expensive offline search procedure in which a genetic algorithm identifies high-quality subsets by directly optimizing reconstruction performance on training scenes. The selector learns to reproduce these choices from geometric and image-level features alone. Across six datasets and multiple input budgets, our method consistently outperforms both geometric and reconstruction-aware view-selection baselines while incurring significantly lower selection costs than reconstruction-based alternatives. Moreover, carefully selected subsets can outperform feed-forward reconstruction from the full input sequence. The learned selector generalizes across diverse reconstruction paradigms (feed-forward, 3D Gaussian Splatting, and NeRF), to object-targeted reconstruction and to a cross-capture setting in which the target views come from a separate acquisition pass. More broadly, our results indicate that explicitly reasoning about target relevance and inter-view redundancy is a fundamental factor in efficient scene reconstruction.",
+      "authors": [
+        "Diego E. Farchione",
+        "Ramzi Idoughi",
+        "Alberto Jaspe-Villanueva",
+        "Peter Wonka"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T16:33:50Z",
+      "updated": "2026-09-28T16:33:50Z",
+      "url": "https://arxiv.org/abs/2609.35573",
+      "score": 0.6085,
+      "why": [
+        {
+          "arxiv_id": "2003.08934",
+          "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+          "similarity": 0.6731
+        },
+        {
+          "arxiv_id": "1512.00567",
+          "title": "Rethinking the Inception Architecture for Computer Vision",
+          "similarity": 0.5938
+        },
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.5587
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35734",
+      "title": "GeoVerse: World-Consistent Novel View Synthesis in Geometric Latent Space",
+      "abstract": "Novel view synthesis from sparse images must reconcile faithful reconstruction of observed regions with plausible completion of unseen content, while maintaining world consistency across viewpoints. Existing geometry-based methods preserve observed scene structure but often struggle to complete unseen regions, whereas video generative models offer rich appearance priors but accumulate inconsistencies during sequential view generation. We propose GeoVerse, a framework that synthesizes world-consistent novel views by performing generation within the geometric latent space of a pretrained 3D foundation model and injecting appearance priors from a video generative model. Specifically, GeoVerse extracts multilevel features from Wan2.2 VACE and injects them into the geometric latent diffusion model via a ControlNet-style adapter, incorporating video-learned appearance priors to enhance structural completion. To enforce cross-view coherence, a global spatial memory continuously aggregates observed and synthesized content, reprojecting target-aligned guidance to anchor subsequent predictions to a shared scene representation. Extensive experiments across diverse datasets demonstrate improved visual quality and geometric consistency, with a 2.23 dB higher PSNR on DL3DV and 32.4% lower ATE on Mip-NeRF360 compared to GLD.",
+      "authors": [
+        "Kerui Ren",
+        "Tao Lu",
+        "Linning Xu",
+        "Changjian Jiang",
+        "Mu Huang",
+        "Chunhua Shen",
+        "Mulin Yu",
+        "Bo Dai"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T17:51:48Z",
+      "updated": "2026-09-28T17:51:48Z",
+      "url": "https://arxiv.org/abs/2609.35734",
+      "score": 0.607,
+      "why": [
+        {
+          "arxiv_id": "2003.08934",
+          "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+          "similarity": 0.6365
+        },
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.6335
+        },
+        {
+          "arxiv_id": "2204.06125",
+          "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "similarity": 0.5509
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35593",
+      "title": "ReSS: Residual-Restoring Sparse Attention for 3D Vision Transformers",
+      "abstract": "3D vision transformers such as VGGT predict camera poses and scene geometry from multi-view images in a single forward pass, but their global attention over all concatenated view tokens dominates computation as the number of views grows. To reduce this cost, SparseVGGT and HeSS sparsify attention at the block level, and both retain blocks with high attention probability. However, we observe that attention probability poorly predicts how much the model's behavior actually changes when a block is removed, and we show that this mismatch is why performance collapses as sparsity increases. In this paper, we propose ReSS (ReSidual-ReStoring Sparse Attention), which recasts block selection from a problem of maximizing the retained attention mass to one of minimizing the drift that sparsification leaves in the residual stream. We introduce a drift score that quantifies how much each block shifts the residual, and, since the drift of a drop set depends on the directions of the contribution vectors rather than on their magnitudes alone, an iterative residual restoration procedure that refines the drop set as a whole. Across three backbones and five datasets, ReSS preserves dense performance better than prior methods at matched sparsity. Two further results support drift as the quantity that governs the cost of sparsification: maximizing drift degrades performance faster than random selection, and plotted against realized drift instead of sparsity, all methods fall approximately onto a single curve. Code is available at https://github.com/libary753/ReSS.",
+      "authors": [
+        "Yongsung Kim",
+        "Jaehoon Lee",
+        "Minjun Park",
+        "Wooseok Song",
+        "Hun Hwangbo",
+        "Sungroh Yoon"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T16:43:55Z",
+      "updated": "2026-09-28T16:43:55Z",
+      "url": "https://arxiv.org/abs/2609.35593",
+      "score": 0.6053,
+      "why": [
+        {
+          "arxiv_id": "2003.08934",
+          "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+          "similarity": 0.6228
+        },
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6018
+        },
+        {
+          "arxiv_id": "1512.00567",
+          "title": "Rethinking the Inception Architecture for Computer Vision",
+          "similarity": 0.5912
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35521",
+      "title": "Beyond Token Scale: Chunk-Level Sparse Autoencoders for Reliable Semantic Feature Discovery",
+      "abstract": "Sparse autoencoders (SAEs) expose features that help us understand and steer language models, but faithful reconstruction does not guarantee informative concepts. Token-level objectives reward lexical and formatting details alongside semantic content, all competing for a limited sparse budget. We introduce a family of chunk-level SAEs that encode mean-pooled activations over chunks, each a contiguous span of tokens: Mean-Chunk reconstructs the observed chunk, Cross-Chunk predicts an independently processed neighbor, and Joint-Chunk combines both targets. These designs separate the effect of a larger observation unit from that of predicting information shared across passages. With matched training data, chunk-level SAEs remain powerful interpretability tools while learning reliable semantic features that capture high-level concepts and respond selectively to relevant content. Their strengths are complementary: Mean-Chunk improves high-level feature discovery, reasoning detection beyond surface cues, and steering; Cross-Chunk leads document retrieval and classification transfer while producing selective, persistent features. Changing what an SAE sees and predicts yields reliable semantic features for more meaningful tasks. We demonstrate their practical value through gains across downstream tasks such as retrieval, reasoning detection, and steering.",
+      "authors": [
+        "Xu Wang",
+        "Yifan Yang",
+        "TingHao YU",
+        "Difan Zou"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-09-28T16:11:30Z",
+      "updated": "2026-09-28T16:11:30Z",
+      "url": "https://arxiv.org/abs/2609.35521",
+      "score": 0.6048,
+      "why": [
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.6124
+        },
+        {
+          "arxiv_id": "1810.04805",
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "similarity": 0.6016
+        },
+        {
+          "arxiv_id": "2005.11401",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "similarity": 0.6006
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34977",
+      "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+      "abstract": "Multimodal Large Language Models face significant efficiency challenges that stem from two distinct yet coupled sources: data redundancy and computational redundancy. While most methods focus on data redundancy by pruning visual tokens from the output of the visual encoder or computing redundancy in LLM decoders using blockwise importance, the finer-grained inter-layer representation shifts and the distribution differences within the layers themselves have not been fully explored. In this work, we comprehensively investigate this dual-level inefficiency. We posit that intermediate layer tokens from vision encoders should be considered for effective visual token pruning, as semantic focus shifts across layers, with middle-layer tokens capturing more detailed object-centric information that deeper layers may abstract away. Furthermore, we reveal the differential contributions of Attention and FFNs across distinct LLM decoder layers. Building upon these discoveries, we propose \\textbf{SPIDER}, a training-free framework that integrates multi-layer \\underline{\\textbf{S}}emantic visual token \\underline{\\textbf{P}}run\\underline{\\textbf{I}}ng with an a\\underline{\\textbf{D}}aptive sub-lay\\underline{\\textbf{ER}} skipping mechanism. Experimental evaluations demonstrate that SPIDER consistently maintains strong performance across various MLLM architectures and reduction ratios. For instance, on LLaVA-NeXT-7B, SPIDER reduces FLOPs by $79\\%$ while maintaining 96$\\%$ of the baseline performance.",
+      "authors": [
+        "Tianxiang Chen",
+        "Zhentao Tan",
+        "Zi Ye",
+        "Yue Wu",
+        "Xiaobing Tu",
+        "Jinkui Ren",
+        "Xiantao Zhang",
+        "Tao Gong",
+        "Qi Chu",
+        "Nenghai Yu",
+        "Xipeng Qiu",
+        "Jieping Ye"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "published": "2026-09-28T11:54:41Z",
+      "updated": "2026-09-28T11:54:41Z",
+      "url": "https://arxiv.org/abs/2609.34977",
+      "score": 0.6041,
+      "why": [
+        {
+          "arxiv_id": "1706.03762",
+          "title": "Attention Is All You Need",
+          "similarity": 0.6143
+        },
+        {
+          "arxiv_id": "1709.01507",
+          "title": "Squeeze-and-Excitation Networks",
+          "similarity": 0.6013
+        },
+        {
+          "arxiv_id": "1911.05722",
+          "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+          "similarity": 0.5967
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34942",
+      "title": "Resolution as a First-Class Decision: Task-Conditioned Routing for Efficient Multimodal Large Language Models",
+      "abstract": "The inference efficiency of Multimodal Large Language Models (MLLMs) is severely constrained by massive visual token sequences induced by high-resolution inputs, with computational cost scaling quadratically. Existing approaches primarily focus on downstream token compression, while overlooking a fundamental upstream inefficiency: input resolution is treated as a static, task-agnostic hyperparameter. We propose Task-Conditioned Resolution Routing (TCRR), which formulates visual compression as a task-conditioned decision and employs a lightweight cross-modal router that conditions backbone visual representations on textual semantics via feature-wise modulation and cross-attention to predict the minimal sufficient compression level per query. To support this, we curate a dataset of 500k samples across 12 task categories, labeled via a teacher-oracle pipeline to approximate Pareto-optimal compression scales. Extensive experiments across diverse architectures show that TCRR achieves a superior efficiency frontier, specifically reducing visual FLOPs by 40.9% and latency by 53.7% on Qwen3-VL-8B while preserving competitive performance. Further analysis of scaling behavior confirms that dynamically routing visual compression enables optimal resource allocation without modifying the MLLM backbone.",
+      "authors": [
+        "Zhiqiang Xia",
+        "Yang Li",
+        "Xinyuan Zhang",
+        "Yuchen Liu",
+        "Haoyu Lu",
+        "Jiaming Xu",
+        "Runyu Shi",
+        "Ying Huang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T11:35:02Z",
+      "updated": "2026-09-28T11:35:02Z",
+      "url": "https://arxiv.org/abs/2609.34942",
+      "score": 0.5988,
+      "why": [
+        {
+          "arxiv_id": "2005.14165",
+          "title": "Language Models are Few-Shot Learners",
+          "similarity": 0.6089
+        },
+        {
+          "arxiv_id": "1810.04805",
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "similarity": 0.5952
+        },
+        {
+          "arxiv_id": "1706.03762",
+          "title": "Attention Is All You Need",
+          "similarity": 0.5922
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35673",
+      "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching",
+      "abstract": "Tool-based image editing (image retouching) is commonly formulated with autoregressive multimodal large language models (MLLMs) that sequentially generate reasoning, tool selections, and parameter values. In this work, we present a novel approach to tool-based image editing by framing the task as a flow matching problem. We introduce FlowTool, a framework that directly models the distribution of high-quality tool parameters conditioned on the input image and user instruction using conditional rectified flow. FlowTool combines a vision-language model backbone for multimodal understanding with a Diffusion Transformer parameter generator that transforms Gaussian noise into an editing plan. We train FlowTool with a two-stage supervised flow-matching curriculum, followed by reward-based post-training. Across MMArt-Bench, FlowTool-Eval, ArtEdit-Bench, and MIT-Adobe5K, FlowTool achieves significantly stronger reference-based performance than specialized MLLM editing agents and proprietary MLLMs, while remaining competitive with proprietary models under reference-free evaluation. Moreover, FlowTool significantly improves inference efficiency, reducing latency by at least $50\\times$ while requiring nearly $2\\times$ less memory than the compared baselines. These results demonstrate that tool-based image editing can be effectively modeled as conditional generation over structured continuous editing parameters, without autoregressive reasoning.",
+      "authors": [
+        "Thanh-Long V. Le",
+        "Steven Walton",
+        "Seunghyun Yoon",
+        "Branislav Kveton",
+        "Trung Bui",
+        "Eunho Yang",
+        "Viet Lai"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T17:28:05Z",
+      "updated": "2026-09-28T17:28:05Z",
+      "url": "https://arxiv.org/abs/2609.35673",
+      "score": 0.5977,
+      "why": [
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.654
+        },
+        {
+          "arxiv_id": "2204.06125",
+          "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "similarity": 0.5759
+        },
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.5632
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35203",
+      "title": "From UNI2-h to ConvNeXt-T: Lightweight Nuclei Instance Segmentation via Knowledge Distillation",
+      "abstract": "Nuclei instance segmentation is a core task in digital pathology, yet high-accuracy models rely on large vision transformer (ViT) encoders whose inference speed cannot meet real-time clinical demands. We propose a lightweight scheme that distills the UNI2-h pathology foundation model into a ConvNeXt-Tiny student (Ours-T, 34.7M parameters, 1/20 of the teacher) via output-level knowledge distillation. Ours-T achieves an mPQ of 0.519 on PanNuke (98.8% of the teacher), a zero-shot bPQ of 0.668 on MoNuSeg, and an inference speed of 634.3 img/s, requiring only 0.045 s for full-resolution 1024^2 analysis (21.8x speedup). Experiments further show that multi-scale gated convolution (MALA) yields no gain under ViT encoders, and output-level distillation alone suffices for efficient knowledge transfer.",
+      "authors": [
+        "Wenyan Li"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T13:59:02Z",
+      "updated": "2026-09-28T13:59:02Z",
+      "url": "https://arxiv.org/abs/2609.35203",
+      "score": 0.5969,
+      "why": [
+        {
+          "arxiv_id": "1505.04597",
+          "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+          "similarity": 0.6151
+        },
+        {
+          "arxiv_id": "2010.11929",
+          "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+          "similarity": 0.5957
+        },
+        {
+          "arxiv_id": "1512.00567",
+          "title": "Rethinking the Inception Architecture for Computer Vision",
+          "similarity": 0.5798
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.30539",
+      "title": "Learning to Replace MCMC in Split-Gibbs Diffusion Posterior Sampling via Deep Unfolding",
+      "abstract": "Split Gibbs sampling enables diffusion posterior inference for general nonlinear inverse problems by decoupling prior and likelihood computations, allowing a pretrained diffusion prior to be reused across measurement models. However, its likelihood update often relies on iterative MCMC, which can hinder parallelization, require algorithm-specific tuning, and incur substantial computational cost. In this work, we propose a learning-based framework to replace this MCMC step by reformulating both Gibbs updates as Gaussian denoising problems and implementing them through ODE diffusion. The prior step reuses a pretrained denoiser, while the likelihood denoiser exploits known likelihood structure through a lightweight deep-unfolded network. Experiments on nonlinear phase retrieval demonstrate the effectiveness of the proposed method as an alternative to MCMC-based split Gibbs at lower likelihood-update cost.",
+      "authors": [
+        "Yi Zhang",
+        "Rui Guo",
+        "Mengchu Xu",
+        "Zhaofeng Liu",
+        "Yonina C. Eldar"
+      ],
+      "categories": [
+        "eess.SP",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2026-09-24T20:47:24Z",
+      "updated": "2026-09-24T20:47:24Z",
+      "url": "https://arxiv.org/abs/2609.30539",
+      "score": 0.5951,
+      "why": [
+        {
+          "arxiv_id": "2010.02502",
+          "title": "Denoising Diffusion Implicit Models",
+          "similarity": 0.632
+        },
+        {
+          "arxiv_id": "2006.11239",
+          "title": "Denoising Diffusion Probabilistic Models",
+          "similarity": 0.6057
+        },
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.5476
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35768",
+      "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
+      "abstract": "Modern video diffusion models require tens of denoising evaluations over long spatiotemporal token sequences. Distribution Matching Distillation (DMD) reduces the number of function evaluations (NFE) to just a few. However, DMD samples can degrade during training, exhibiting progressive oversaturation and artifacts. We trace this instability to critic errors, which enter successive student updates and accumulate over time. We introduce Projected Distribution Matching Distillation (PDMD) to filter critic errors. PDMD projects out the component of the DMD update parallel to the student-critic endpoint residual. At a fixed noisy query, we prove that this residual is an unbiased estimate of the critic's endpoint error. Under high-dimensional assumptions, this projection removes a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Empirically, the projection stabilizes training and improves sample quality where DMD degrades and develops unnatural textures. PDMD requires only a one-line code change to DMD, with no extra loss, network, data, model pass, or multi-stage training. With Wan2.1, PDMD achieves a VBench total score of 83.73 at 4 NFE, surpassing matched DMD by 1.03 points. On MiniMax-H3 joint video-audio generation, PDMD achieves a VideoGen-Eval visual total score of 83.17, 0.41 points above the strongest distilled baseline. PDMD also achieves the best performance on all six audio metrics among the compared 4-NFE models. Qualitative comparisons and user studies favor PDMD over the distilled baselines in visual quality, motion, and audio quality. Code and models are available at https://pdmd2026.github.io/.",
+      "authors": [
+        "Zimo Wang",
+        "Junkun Yuan",
+        "Angtian Wang",
+        "Haotian Yang",
+        "Canyu Zhang",
+        "Siyuan Yuan",
+        "Xingchang Huang",
+        "Bo Liu",
+        "Yizhi Wang",
+        "Yiding Yang",
+        "Chongyang Ma",
+        "Gordon Guocheng Qian"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2026-09-28T17:59:52Z",
+      "updated": "2026-09-28T17:59:52Z",
+      "url": "https://arxiv.org/abs/2609.35768",
+      "score": 0.5933,
+      "why": [
+        {
+          "arxiv_id": "2006.11239",
+          "title": "Denoising Diffusion Probabilistic Models",
+          "similarity": 0.6196
+        },
+        {
+          "arxiv_id": "2010.02502",
+          "title": "Denoising Diffusion Implicit Models",
+          "similarity": 0.5878
+        },
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.5726
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35289",
+      "title": "Domain-adaptive Zero-Shot Image Enhancement via Locality-Constrained Diffusion Guidance",
+      "abstract": "Denoising Diffusion Probabilistic Models have shown remarkable performance in unconditional image generation. In order to generate images with desired semantics, recent works have restricted the solution space by using guidance constraints in the diffusion sampling process. However, for image enhancement across different domains, these methods struggle to balance two main requirements: looking realistic in the target domain (photorealistic images) and preserving relevant features of the source domain, e.g., low-quality renderings or art paintings. Here, small local changes can alter the fidelity of the image completely, while large changes in other regions might be insignificant. We introduce LocDiff, a locality-constrained guidance method for image enhancement, which serves as a zero-shot extension to pre-trained diffusion models, ensuring the preservation of critical features during domain adaptation. In this way, we retain important local features, while allowing less critical regions to remain unconstrained and not interfere with the guidance process for relevant regions. We evaluate our method on two different domain-shift tasks: For art-to-photo translation, we apply the method in a fully zero-shot setting, preserving facial identity from paintings while generating photorealistic details. For enhancing low-quality fetal ultrasound renderings, we demonstrate zero-shot inference with auxiliary prior alignment. Here, the objective is to artificially add high-resolution characteristics and produce photorealistic ultrasound renderings, a target domain for which no ground truth distribution exists. Our experimental results demonstrate that LocDiff achieves favorable realism-faithfulness trade-offs compared to state-of-the-art methods, enabling controllable cross-domain enhancement.",
+      "authors": [
+        "Theresa Neubauer",
+        "Dimitrios Lenis",
+        "Astrid Berg",
+        "Maria Wimmer",
+        "Gaia Romana De Paolis",
+        "Philip Matthias Winter",
+        "David Major",
+        "Johannes Novotny",
+        "Ariharasudhan Muthusami",
+        "Katja B\u00fchler"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T14:35:56Z",
+      "updated": "2026-09-28T14:35:56Z",
+      "url": "https://arxiv.org/abs/2609.35289",
+      "score": 0.5925,
+      "why": [
+        {
+          "arxiv_id": "2112.10752",
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "similarity": 0.6132
+        },
+        {
+          "arxiv_id": "2010.02502",
+          "title": "Denoising Diffusion Implicit Models",
+          "similarity": 0.5927
+        },
+        {
+          "arxiv_id": "2006.11239",
+          "title": "Denoising Diffusion Probabilistic Models",
+          "similarity": 0.5717
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35072",
+      "title": "Not All Rollouts Are Worth Learning: On Trajectory Valuation for Post-Training Reinforcement Learning",
+      "abstract": "We consider the problem of trajectory valuation in reinforcement learning: how to identify and mitigate detrimental trajectories during online training. Unlike classification, where data valuation relies on fixed training and validation sets, reinforcement learning involves dynamically generated trajectories without explicit validation signals, making conventional influence-based methods inapplicable. We propose Dynamic Trajectory Valuation (DTV), a simple and efficient framework that estimates trajectory utility at the mini-batch level and filters detrimental trajectories based solely on gradient information. By operating at the optimization level, DTV integrates seamlessly with existing reinforcement learning pipelines with minimal overhead. Extensive experiments across diverse settings, including PPO, GRPO, and DPO, demonstrate that DTV consistently improves performance, enhances data efficiency, and stabilizes optimization.",
+      "authors": [
+        "Xuesong Jia",
+        "Ziao Yang",
+        "Zhanhe Huang",
+        "Hongfu Liu"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-28T12:57:33Z",
+      "updated": "2026-09-28T12:57:33Z",
+      "url": "https://arxiv.org/abs/2609.35072",
+      "score": 0.5908,
+      "why": [
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.6881
+        },
+        {
+          "arxiv_id": "1509.06461",
+          "title": "Deep Reinforcement Learning with Double Q-learning",
+          "similarity": 0.5501
+        },
+        {
+          "arxiv_id": "1509.02971",
+          "title": "Continuous control with deep reinforcement learning",
+          "similarity": 0.5341
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34688",
+      "title": "Unified Trajectory Matching Policy Optimization: Diverse T2I Generation and VLA Generalization",
+      "abstract": "Reward-maximizing reinforcement learning (RL) is widely used to post-train stochastic diffusion and flow policies for text-to-image (T2I) generation. However, reward-maximizing RL causes policy mode collapse even under reference KL or entropy regularization, reducing the policy to a single high-reward mode. In T2I, this produces similar images and reward hacking. When extended to vision-language-action (VLA) models, the same collapse removes alternative successful strategies and weakens task and scene generalization. To address this limitation, we introduce Unified Trajectory Matching Policy Optimization (Uni-TMPO), a unified RL post-training framework for diffusion and flow policies. First, Uni-TMPO converts standardized rewards into a target distribution within each trajectory group and derives the policy distribution from trajectory log probabilities. Then, forward Kullback-Leibler optimization matches the two distributions instead of maximizing expected reward. A progress-conditioned coarse-to-fine scheduler efficiently constructs T2I trajectories. Within the unified framework, feedback-conditioned sampling uses updated observations to construct VLA trajectories. Extensive experiments show that Uni-TMPO achieves higher T2I rewards and VLA ID success rates than the strongest baselines. More importantly, it achieves the best T2I reward-diversity-efficiency trade-off and VLA generalization to held-out tasks and scenes, while real-robot evaluation demonstrates the value of multiple action strategies when the higher-reward target is blocked.",
+      "authors": [
+        "Zhiyuan Ma",
+        "Jiaming Li",
+        "Lingzhen Li",
+        "Yu Liu",
+        "Xuekai Zhu",
+        "Dingkang Liang",
+        "Kaiyan Zhang",
+        "Jianjun Li",
+        "Bowen Zhou",
+        "Xiang Bai"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T09:13:03Z",
+      "updated": "2026-09-28T09:13:03Z",
+      "url": "https://arxiv.org/abs/2609.34688",
+      "score": 0.5898,
+      "why": [
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.6231
+        },
+        {
+          "arxiv_id": "1509.02971",
+          "title": "Continuous control with deep reinforcement learning",
+          "similarity": 0.5734
+        },
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.5731
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.34944",
+      "title": "Adjoint Guidance Flow: Amortized Critic Guidance for VLA Policies",
+      "abstract": "Flow-based Vision-Language-Action (VLA) policies are typically trained by behavior cloning and thus do not explicitly optimize long-term task return. Critic guidance steers generation toward higher-value actions, but existing methods differentiate the critic through a one-step surrogate of the sampler and back-propagate a critic ensemble at every flow step. In contrast, here we propose Adjoint Guidance Flow (AGF), which amortizes trajectory-aware critic guidance into a lightweight guidance network while preserving the pretrained VLA policy. Specifically, we formulate critic-guided flow generation as a deterministic optimal control problem, whose optimal guidance is a costate that carries the terminal critic gradient back through the remaining flow, and regress the guidance network onto this costate while keeping both the VLA and critic frozen. This design provides favorable memory and throughput scaling during training, and inference needs one guidance-network forward pass per step, without the critic ensemble, back-propagation, or adjoint computation. Across LIBERO, RoboCasa, and LIBERO-Pro, AGF consistently improves pretrained VLAs, remains competitive with critic-guidance and policy-fine-tuning baselines, and is the most robust method when a single guidance strength is deployed across tasks. Compared with QGF, AGF runs $3.6\\times$ faster per guidance step with $7.0\\times$ fewer parameters, with comparable and even better performance, showing that critic guidance can be trajectory-aware and lightweight.",
+      "authors": [
+        "Jeongsol Kim",
+        "Youngjun Jun",
+        "Kyumin Choi",
+        "Youngmin Kim",
+        "Seonghyun Jin",
+        "Sunwoo Park",
+        "Jangho Park",
+        "Kwanyoung Kim",
+        "Jong Chul Ye"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "cs.RO"
+      ],
+      "published": "2026-09-28T11:37:06Z",
+      "updated": "2026-09-28T11:37:06Z",
+      "url": "https://arxiv.org/abs/2609.34944",
+      "score": 0.5885,
+      "why": [
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.6196
+        },
+        {
+          "arxiv_id": "1602.01783",
+          "title": "Asynchronous Methods for Deep Reinforcement Learning",
+          "similarity": 0.5973
+        },
+        {
+          "arxiv_id": "1509.02971",
+          "title": "Continuous control with deep reinforcement learning",
+          "similarity": 0.5486
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35464",
+      "title": "W2Rep: Learning Visual Representations by Watching the World Change",
+      "abstract": "Images capture the world at one moment, whereas video reveals how it changes. Image self-supervision learns spatial structure from a single moment, while video methods commonly learn temporal relationships inside a representation computed jointly from several frames. We ask whether watching a scene change can instead improve features available from one image without sacrificing the ability to represent video. We introduce W2Rep, a masked feature-prediction framework in which an independently encoded source image participates in prediction at the same or another moment. The predictor is conditioned on visible video context, the queried location, and the signed time interval between source and target. This gives the cross-frame objective two complementary roles: the image path learns features that remain useful across time, while the video path must gather evidence that is missing from the source image. Across model scales and downstream tasks, W2Rep improves frozen and fine-tuned recognition under our comparison protocol, while joint video encoding provides further gains over frame-wise aggregation. Controlled experiments show that these gains depend on directly updating the source-image features and on using both video context and temporal displacement. Overall, change across a video can supervise a visual encoder whose representations remain useful at either image or video granularity. Code is available at~\\href{https://wenooi.github.io/W2Rep}{https://wenooi.github.io/W2Rep}.",
+      "authors": [
+        "Wen Huang",
+        "Hang Guo",
+        "Jiarui Yang",
+        "Zheng Liu",
+        "Tao Dai",
+        "Shu-tao Xia"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-09-28T15:51:41Z",
+      "updated": "2026-09-28T15:51:41Z",
+      "url": "https://arxiv.org/abs/2609.35464",
+      "score": 0.5878,
+      "why": [
+        {
+          "arxiv_id": "2103.00020",
+          "title": "Learning Transferable Visual Models From Natural Language Supervision",
+          "similarity": 0.6176
+        },
+        {
+          "arxiv_id": "2002.05709",
+          "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+          "similarity": 0.5907
+        },
+        {
+          "arxiv_id": "1506.01497",
+          "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+          "similarity": 0.5552
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.35698",
+      "title": "Provable Benefits of Regularization: Fast Rates for Adversarial Imitation Learning",
+      "abstract": "We study adversarial imitation learning (AIL), in which an agent learns to imitate expert demonstrations by optimizing a policy against an adversarial reward that distinguishes expert and learner behavior. Historically, reward regularization and entropy-based policy regularization are key components of empirically successful methods such as GAIL and LS-IQ, yet their finite-sample benefits remain underexplored. We establish fast rates for jointly regularized AIL in finite-horizon Markov decision processes with general function approximation. Our model-free algorithm, Dually Regularized AIL, combines KL policy regularization with a quadratic reward penalty weighted by expert and learner occupancies. With K online episodes and N expert trajectories, we prove a $\\widetilde{O}\\left(\\frac{1}{K}+\\frac{1}{N}\\right)$ bound on the regularized imitation gap for fixed regularization parameters. Our analysis combines an online mirror descent construction for general convex reward classes to control estimation error from finite expert data and stochastic learner feedback, with a sharp analysis of optimistic KL-regularized policy learning. To the best of our knowledge, Dually Regularized AIL is the first algorithm to simultaneously achieve $\\widetilde{O}\\left(\\frac{1}\u03b5\\right)$ sample complexity in both expert demonstrations and online interactions for this regularized AIL objective, even with stochastic experts. These results provide a rigorous characterization of the complementary statistical benefits of reward and policy regularization in AIL.",
+      "authors": [
+        "Hanbin Zhou",
+        "Shangzhe Li",
+        "Alexander Braverman",
+        "Weitong Zhang"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-09-28T17:40:11Z",
+      "updated": "2026-09-28T17:40:11Z",
+      "url": "https://arxiv.org/abs/2609.35698",
+      "score": 0.5872,
+      "why": [
+        {
+          "arxiv_id": "1707.06347",
+          "title": "Proximal Policy Optimization Algorithms",
+          "similarity": 0.6502
+        },
+        {
+          "arxiv_id": "1509.06461",
+          "title": "Deep Reinforcement Learning with Double Q-learning",
+          "similarity": 0.5608
+        },
+        {
+          "arxiv_id": "1602.01783",
+          "title": "Asynchronous Methods for Deep Reinforcement Learning",
+          "similarity": 0.5505
+        }
+      ]
+    }
+  ]
+}

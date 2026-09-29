@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papercompass demo</title>
+<meta name="description" content="Static demo: precomputed papercompass recommendations for a public machine learning reading list.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #2a2f3a;
+    --text: #e6e8ec;
+    --muted: #9aa2b1;
+    --accent: #6ea8fe;
+    --accent-dim: #2d4a7a;
+    --good: #6fd08c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 2rem 1.5rem 1rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  header h1 { font-size: 1.6rem; margin: 0 0 0.25rem 0; }
+  header p.tag { color: var(--muted); margin: 0 0 1rem 0; }
+  header p.explain { color: var(--text); font-size: 0.95rem; }
+  header a { color: var(--accent); }
+  .meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 3rem;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  .card .rank { color: var(--muted); font-size: 0.8rem; }
+  .card .title { font-weight: 600; font-size: 1rem; margin-top: 0.15rem; }
+  .card .title a { color: var(--text); text-decoration: none; }
+  .card .title a:hover { color: var(--accent); }
+  .card .meta-line { color: var(--muted); font-size: 0.82rem; margin-top: 0.2rem; }
+  .card .score { color: var(--good); font-variant-numeric: tabular-nums; }
+  .card .why { margin-top: 0.5rem; font-size: 0.83rem; color: var(--muted); }
+  .card .why b { color: var(--text); font-weight: 500; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 1rem; }
+  footer a { color: var(--accent); }
+  code { background: #0d0f13; padding: 0.1rem 0.35rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>papercompass demo</h1>
+  <p class="tag">recommendations over your own library, not another digest bot</p>
+  <p class="explain">
+    This page is precomputed and static, no server behind it. It shows what
+    <code>papercompass</code> recommends when its seed library is the 50-paper
+    curated machine learning reading list in
+    <a href="https://github.com/Arthur031221/papercompass/blob/main/eval/reading_list.json" target="_blank" rel="noopener">eval/reading_list.json</a>,
+    ranked against a real corpus of recent arXiv papers. Run it on your own
+    library with <code>uvx papercompass serve</code>, see the
+    <a href="https://github.com/Arthur031221/papercompass" target="_blank" rel="noopener">README</a>.
+  </p>
+  <div class="meta" id="meta">loading...</div>
+</header>
+<main id="results">
+  <p style="color:var(--muted)">loading recommendations...</p>
+</main>
+<footer>
+  papercompass v0.1.0 &middot;
+  <a href="https://github.com/Arthur031221/papercompass" target="_blank" rel="noopener">source</a>
+</footer>
+<script>
+function escapeHtml(s) {
+  return (s || "").replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+function fmtAuthors(authors) {
+  if (!authors || !authors.length) return "";
+  if (authors.length <= 3) return authors.join(", ");
+  return authors.slice(0, 3).join(", ") + " et al.";
+}
+fetch("data.json")
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById("meta").innerHTML =
+      `generated ${d.generated_at} &middot; model ${escapeHtml(d.model)} &middot; ` +
+      `${d.seed_count} seed papers &middot; ranked against ${d.candidate_pool_size} candidates`;
+    const main = document.getElementById("results");
+    main.innerHTML = "";
+    d.recommendations.forEach((r, i) => {
+      const date = (r.published || "").slice(0, 10);
+      const whyHtml = r.why.map(w => `<b>${escapeHtml(w.title)}</b> (${w.similarity.toFixed(2)})`).join(", ");
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <div class="rank">#${i + 1} <span class="score">score ${r.score.toFixed(3)}</span></div>
+        <div class="title"><a href="${r.url}" target="_blank" rel="noopener">${escapeHtml(r.title)}</a></div>
+        <div class="meta-line">${escapeHtml(fmtAuthors(r.authors))} &middot; ${date} &middot; ${escapeHtml((r.categories||[]).join(", "))}</div>
+        <div class="why">Why: nearest to ${whyHtml}</div>
+      `;
+      main.appendChild(div);
+    });
+  })
+  .catch(err => {
+    document.getElementById("results").innerHTML =
+      `<p style="color:#f28b82">could not load data.json: ${escapeHtml(err.message)}</p>`;
+  });
+</script>
+</body>
+</html>
