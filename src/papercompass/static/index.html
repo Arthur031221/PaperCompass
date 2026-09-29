@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papercompass</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #2a2f3a;
+    --text: #e6e8ec;
+    --muted: #9aa2b1;
+    --accent: #6ea8fe;
+    --accent-dim: #2d4a7a;
+    --good: #6fd08c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  header h1 { font-size: 1.25rem; margin: 0; }
+  header .tag { color: var(--muted); font-size: 0.9rem; }
+  header .stats { margin-left: auto; color: var(--muted); font-size: 0.85rem; }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .panel h2 { font-size: 1rem; margin: 0 0 0.75rem 0; }
+  .row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+  input[type="text"], textarea, input[type="file"] {
+    background: #0d0f13;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+  }
+  textarea { width: 100%; min-height: 5rem; resize: vertical; }
+  input[type="text"] { flex: 1; min-width: 200px; }
+  button {
+    background: var(--accent-dim);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  button:hover { background: var(--accent); color: #08101f; }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .muted { color: var(--muted); font-size: 0.85rem; }
+  .status { font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.2rem; }
+  .status.ok { color: var(--good); }
+  .status.err { color: #f28b82; }
+  ul.plain { list-style: none; margin: 0.5rem 0 0 0; padding: 0; }
+  ul.plain li {
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  ul.plain li a { color: var(--text); text-decoration: none; }
+  ul.plain li a:hover { color: var(--accent); }
+  .card {
+    border-top: 1px solid var(--border);
+    padding: 0.75rem 0;
+  }
+  .card:first-child { border-top: none; }
+  .card .title { font-weight: 600; font-size: 0.95rem; }
+  .card .title a { color: var(--text); text-decoration: none; }
+  .card .title a:hover { color: var(--accent); }
+  .card .meta { color: var(--muted); font-size: 0.8rem; margin-top: 0.15rem; }
+  .card .score { color: var(--good); font-variant-numeric: tabular-nums; }
+  .card .why { margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted); }
+  .card .why b { color: var(--text); font-weight: 500; }
+  .tabs { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+  .tabs button { background: transparent; border: 1px solid var(--border); }
+  .tabs button.active { background: var(--accent-dim); border-color: var(--accent); }
+  .import-mode { display: none; }
+  .import-mode.active { display: block; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 2rem 1rem; }
+  code { background: #0d0f13; padding: 0.1rem 0.35rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>papercompass</h1>
+  <span class="tag">recommendations over your own library</span>
+  <span class="stats" id="stats">loading...</span>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Seed library</h2>
+    <div class="tabs">
+      <button data-mode="list" class="active">Plain list of arXiv ids</button>
+      <button data-mode="bibtex">BibTeX file</button>
+      <button data-mode="zotero">Zotero CSV</button>
+    </div>
+
+    <div class="import-mode active" data-mode="list">
+      <textarea id="idListText" placeholder="One arXiv id or URL per line, e.g.&#10;1706.03762&#10;https://arxiv.org/abs/2005.14165"></textarea>
+      <div class="row" style="margin-top:0.5rem">
+        <button id="importListBtn">Import list</button>
+      </div>
+    </div>
+    <div class="import-mode" data-mode="bibtex">
+      <input type="file" id="bibtexFile" accept=".bib,.bibtex">
+      <div class="row" style="margin-top:0.5rem">
+        <button id="importBibtexBtn">Import BibTeX</button>
+      </div>
+    </div>
+    <div class="import-mode" data-mode="zotero">
+      <input type="file" id="zoteroFile" accept=".csv">
+      <div class="row" style="margin-top:0.5rem">
+        <button id="importZoteroBtn">Import Zotero CSV</button>
+      </div>
+    </div>
+    <div class="status" id="importStatus"></div>
+
+    <h2 style="margin-top:1.25rem">Current seeds (<span id="seedCount">0</span>)</h2>
+    <ul class="plain" id="seedList"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>Corpus</h2>
+    <p class="muted">Pull recent arXiv papers into the corpus before the feed has anything to rank. Uses the default categories (cs.LG, cs.CL, cs.AI, cs.CV, stat.ML) over the last 90 days. This respects arXiv's rate limit and can take a minute or two the first time.</p>
+    <button id="ingestBtn">Ingest recent papers</button>
+    <div class="status" id="ingestStatus"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Search</h2>
+    <div class="row">
+      <input type="text" id="searchInput" placeholder="Semantic search over the corpus, e.g. contrastive learning for retrieval">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div id="searchResults"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Ranked feed</h2>
+    <p class="muted">Papers in the corpus ranked by similarity to your seed library, with the three nearest seed papers explaining each recommendation.</p>
+    <button id="feedBtn">Refresh feed</button>
+    <div id="feedResults"></div>
+  </section>
+</main>
+
+<footer>papercompass v0.1.0</footer>
+
+<script>
+const $ = (sel, root) => (root || document).querySelector(sel);
+const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+async function api(path, opts) {
+  const resp = await fetch(path, opts);
+  const data = await resp.json().catch(() => ({}));
+  if (!resp.ok) {
+    throw new Error(data.detail || `request failed (${resp.status})`);
+  }
+  return data;
+}
+
+function fmtAuthors(authors) {
+  if (!authors || !authors.length) return "";
+  if (authors.length <= 3) return authors.join(", ");
+  return authors.slice(0, 3).join(", ") + " et al.";
+}
+
+function paperCard(p, extra) {
+  const div = document.createElement("div");
+  div.className = "card";
+  const date = (p.published || "").slice(0, 10);
+  let whyHtml = "";
+  if (extra && extra.why && extra.why.length) {
+    whyHtml = `<div class="why">Why: nearest to ` +
+      extra.why.map(w => `<b>${escapeHtml(w.title)}</b> (${w.similarity.toFixed(2)})`).join(", ") +
+      `</div>`;
+  }
+  const score = extra && typeof extra.score === "number"
+    ? `<span class="score">${extra.score.toFixed(3)}</span>` : "";
+  div.innerHTML = `
+    <div class="title"><a href="${p.url}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a></div>
+    <div class="meta">${escapeHtml(fmtAuthors(p.authors))} &middot; ${date} &middot; ${escapeHtml((p.categories||[]).join(", "))} ${score}</div>
+    ${whyHtml}
+  `;
+  return div;
+}
+
+function escapeHtml(s) {
+  return (s || "").replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function setStatus(el, text, ok) {
+  el.textContent = text;
+  el.className = "status " + (ok === undefined ? "" : ok ? "ok" : "err");
+}
+
+async function refreshStats() {
+  const s = await api("/api/stats");
+  $("#stats").textContent = `${s.papers} papers in corpus, ${s.seeds} seeds`;
+}
+
+async function refreshSeeds() {
+  const seeds = await api("/api/seeds");
+  $("#seedCount").textContent = seeds.length;
+  const list = $("#seedList");
+  list.innerHTML = "";
+  seeds.forEach(p => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${p.url}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>`;
+    const btn = document.createElement("button");
+    btn.textContent = "remove";
+    btn.onclick = async () => {
+      await api(`/api/seeds/${encodeURIComponent(p.arxiv_id)}`, { method: "DELETE" });
+      refreshSeeds();
+      refreshStats();
+    };
+    li.appendChild(btn);
+    list.appendChild(li);
+  });
+}
+
+$$(".tabs button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    $$(".tabs button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const mode = btn.dataset.mode;
+    $$(".import-mode").forEach(d => d.classList.toggle("active", d.dataset.mode === mode));
+  });
+});
+
+$("#importListBtn").addEventListener("click", async () => {
+  const text = $("#idListText").value.trim();
+  const status = $("#importStatus");
+  if (!text) { setStatus(status, "paste at least one arXiv id first", false); return; }
+  try {
+    const res = await api("/api/seeds/import-text", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text, format: "list" }),
+    });
+    setStatus(status, `added ${res.added.length} seeds` + (res.unresolved.length ? `, could not resolve ${res.unresolved.length}` : ""), true);
+    refreshSeeds(); refreshStats();
+  } catch (e) { setStatus(status, e.message, false); }
+});
+
+async function importFile(inputEl, statusEl) {
+  const file = inputEl.files[0];
+  if (!file) { setStatus(statusEl, "choose a file first", false); return; }
+  const fd = new FormData();
+  fd.append("file", file);
+  try {
+    const res = await api("/api/seeds/import-file", { method: "POST", body: fd });
+    setStatus(statusEl, `added ${res.added.length} seeds` + (res.unresolved.length ? `, could not resolve ${res.unresolved.length}` : ""), true);
+    refreshSeeds(); refreshStats();
+  } catch (e) { setStatus(statusEl, e.message, false); }
+}
+$("#importBibtexBtn").addEventListener("click", () => importFile($("#bibtexFile"), $("#importStatus")));
+$("#importZoteroBtn").addEventListener("click", () => importFile($("#zoteroFile"), $("#importStatus")));
+
+$("#ingestBtn").addEventListener("click", async () => {
+  const status = $("#ingestStatus");
+  const btn = $("#ingestBtn");
+  btn.disabled = true;
+  setStatus(status, "ingesting, this can take a minute or two...");
+  try {
+    const res = await api("/api/ingest", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({}),
+    });
+    setStatus(status, `${res.new_papers} new papers, ${res.total_papers} total`, true);
+    refreshStats();
+  } catch (e) { setStatus(status, e.message, false); }
+  btn.disabled = false;
+});
+
+$("#searchBtn").addEventListener("click", doSearch);
+$("#searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+async function doSearch() {
+  const q = $("#searchInput").value.trim();
+  const results = $("#searchResults");
+  if (!q) { results.innerHTML = ""; return; }
+  results.innerHTML = '<p class="muted">searching...</p>';
+  try {
+    const res = await api(`/api/search?q=${encodeURIComponent(q)}`);
+    results.innerHTML = "";
+    if (!res.results.length) { results.innerHTML = '<p class="muted">no matches, ingest some papers first</p>'; return; }
+    res.results.forEach(p => results.appendChild(paperCard(p, { score: p.score })));
+  } catch (e) { results.innerHTML = `<p class="status err">${escapeHtml(e.message)}</p>`; }
+}
+
+$("#feedBtn").addEventListener("click", loadFeed);
+async function loadFeed() {
+  const results = $("#feedResults");
+  results.innerHTML = '<p class="muted">loading...</p>';
+  try {
+    const res = await api("/api/feed");
+    results.innerHTML = "";
+    if (res.message) { results.innerHTML = `<p class="muted">${escapeHtml(res.message)}</p>`; return; }
+    if (!res.recommendations.length) { results.innerHTML = '<p class="muted">no recommendations yet, ingest some papers first</p>'; return; }
+    res.recommendations.forEach(r => results.appendChild(paperCard(r, { score: r.score, why: r.why })));
+  } catch (e) { results.innerHTML = `<p class="status err">${escapeHtml(e.message)}</p>`; }
+}
+
+refreshStats();
+refreshSeeds();
+loadFeed();
+</script>
+</body>
+</html>
