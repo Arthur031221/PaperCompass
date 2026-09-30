@@ -109,6 +109,12 @@ Full method and raw numbers in [`eval/RESULTS.md`](eval/RESULTS.md), reproduce w
 
 A static, precomputed version of the ranked feed is published on GitHub Pages: [arthur031221.github.io/papercompass](https://arthur031221.github.io/papercompass/). It shows papercompass's recommendations when the seed library is the full 50-paper curated reading list in `eval/reading_list.json`, ranked against a real corpus of recent arXiv papers. Regenerate it with `uv run python docs/generate_demo.py`.
 
+## Related projects
+
+- [cardsmith](https://github.com/Arthur031221/cardsmith): Another offline app that turns documents you already have into something usable, flashcards instead of recommendations.
+- [labexplain](https://github.com/Arthur031221/labexplain): Same local-first shape: a PDF in, a useful local result out, nothing uploaded.
+- [docling-guard](https://github.com/Arthur031221/docling-guard): If you feed papercompass's PDFs through Docling first, this checks that the extraction did not lose or misplace text.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and feature requests use the issue templates.
