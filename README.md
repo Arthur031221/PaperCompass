@@ -1,14 +1,14 @@
-# papercompass
+# PaperCompass
 
 Recommendations over your own paper library, not another daily digest bot.
 
-On a held-out test built from a curated 50-paper machine learning reading list, papercompass recovers 90% of the withheld papers (9 of 10) in its top 50 recommendations, ranked against a pool of 673 real arXiv papers.[^1]
+On a held-out test built from a curated 50-paper machine learning reading list, PaperCompass recovers 90% of the withheld papers (9 of 10) in its top 50 recommendations, ranked against a pool of 673 real arXiv papers.[^1]
 
-[![CI](https://github.com/Arthur031221/papercompass/actions/workflows/ci.yml/badge.svg)](https://github.com/Arthur031221/papercompass/actions/workflows/ci.yml)
+[![CI](https://github.com/Arthur031221/PaperCompass/actions/workflows/ci.yml/badge.svg)](https://github.com/Arthur031221/PaperCompass/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![version](https://img.shields.io/badge/version-0.1.0-informational)
 
-![papercompass CLI demo](demo/demo.gif)
+![PaperCompass CLI demo](demo/demo.gif)
 
 ## Why
 
@@ -23,13 +23,13 @@ uvx papercompass serve
 Before the PyPI release is up, run it straight from the repository:
 
 ```
-uvx --from git+https://github.com/Arthur031221/papercompass papercompass serve
+uvx --from git+https://github.com/Arthur031221/PaperCompass papercompass serve
 ```
 
 Or clone and run with uv:
 
 ```
-git clone https://github.com/Arthur031221/papercompass
+git clone https://github.com/Arthur031221/PaperCompass
 cd papercompass
 uv run papercompass serve
 ```
@@ -66,7 +66,7 @@ papercompass import my_library.bib
 
 ## Comparison
 
-| | papercompass | arxiv-sanity-lite | arXiv digest bots | Semantic Scholar recommendations |
+| | PaperCompass | arxiv-sanity-lite | arXiv digest bots | Semantic Scholar recommendations |
 |---|---|---|---|---|
 | Ranks against your own library | Yes, seed papers you choose | Yes, but unmaintained | No, keyword or category filter only | Yes, but needs a Semantic Scholar account and your library lives on their server |
 | Explains each recommendation | Yes, 3 nearest seed papers with scores | Similarity search only, no explanation | No | Partial, "based on your library" with no specific papers named |
@@ -75,7 +75,7 @@ papercompass import my_library.bib
 | Last commit | 2026-09-30 | 2023-06-19, 1,697 stars, unmaintained | Typically under 20 stars, most abandoned within months | Actively maintained, closed source |
 | Self-hosted | Yes, SQLite plus a local process | Yes | Varies | No |
 
-papercompass does not do anything arxiv-sanity-lite could not do when it was maintained. The difference is it is maintained, it adds an explanation for every recommendation instead of a bare similarity score, and it imports an existing Zotero or BibTeX library instead of requiring you to rebuild one paper at a time.
+PaperCompass does not do anything arxiv-sanity-lite could not do when it was maintained. The difference is it is maintained, it adds an explanation for every recommendation instead of a bare similarity score, and it imports an existing Zotero or BibTeX library instead of requiring you to rebuild one paper at a time.
 
 ## Command reference
 
@@ -107,13 +107,13 @@ Full method and raw numbers in [`eval/RESULTS.md`](eval/RESULTS.md), reproduce w
 
 ## Demo
 
-A static, precomputed version of the ranked feed is published on GitHub Pages: [arthur031221.github.io/papercompass](https://arthur031221.github.io/papercompass/). It shows papercompass's recommendations when the seed library is the full 50-paper curated reading list in `eval/reading_list.json`, ranked against a real corpus of recent arXiv papers. Regenerate it with `uv run python docs/generate_demo.py`.
+A static, precomputed version of the ranked feed is published on GitHub Pages: [arthur031221.github.io/papercompass](https://arthur031221.github.io/PaperCompass/). It shows PaperCompass's recommendations when the seed library is the full 50-paper curated reading list in `eval/reading_list.json`, ranked against a real corpus of recent arXiv papers. Regenerate it with `uv run python docs/generate_demo.py`.
 
 ## Related projects
 
 - [cardsmith](https://github.com/Arthur031221/cardsmith): Another offline app that turns documents you already have into something usable, flashcards instead of recommendations.
 - [labexplain](https://github.com/Arthur031221/labexplain): Same local-first shape: a PDF in, a useful local result out, nothing uploaded.
-- [docling-guard](https://github.com/Arthur031221/docling-guard): If you feed papercompass's PDFs through Docling first, this checks that the extraction did not lose or misplace text.
+- [docling-guard](https://github.com/Arthur031221/docling-guard): If you feed PaperCompass's PDFs through Docling first, this checks that the extraction did not lose or misplace text.
 
 ## Contributing
 
