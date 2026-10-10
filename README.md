@@ -124,3 +124,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and feature requests use the
 MIT, see [LICENSE](LICENSE).
 
 [^1]: Recall@50 on a stratified 80/20 split (40 seed papers, 10 held out) of the 50-paper reading list in `eval/reading_list.json`, ranked against a candidate pool of 673 papers (the 10 held-out papers plus a distractor corpus ingested the same way `papercompass ingest` does: categories cs.LG, cs.CL, cs.CV, stat.ML, cs.AI, last 90 days). Model: sentence-transformers/all-MiniLM-L6-v2, CPU. Measured on a MacBook Air, Apple Silicon, 2026-09-30. Consistent at 90% across 4 different random splits. Full method in `eval/RESULTS.md`.
+
+Assisted by Claude/Codex.
